@@ -1,7 +1,9 @@
-import axios from 'axios'
+import { api } from './client.ts'
 
 export const checkHealth = async () => {
-    return axios.get('/health-check', {
-        timeout: 1 // forces timeout immediately
-    })
+    return api.get('/health-check')
+}
+
+export const checkNeonHealth = async () => {
+    return api.get('/health-check/neon')
 }
