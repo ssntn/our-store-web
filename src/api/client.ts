@@ -3,5 +3,5 @@ import { BASE_URL } from './config.ts'
 
 export const api = axios.create({
     baseURL: BASE_URL,
-    timeout: 5000,
+    timeout: 30000, // 🔥 increase to 30 seconds
 })
